@@ -1,18 +1,18 @@
 call pathogen#infect()
 
-set nocompatible        " do not emulate vi's limitations, whatever they are
-set nowrap              " learn how to write 80-character wide code, y'all!
+set nocompatible
+set nowrap
 set colorcolumn=80
-set tabstop=4           " tab character treated as four characters wide
-set expandtab           " tab inserts spaces instead of tab character...
-set shiftwidth=4        " ...specifically, four spaces
-set autoindent          " keep current indentation level when starting new line
-set incsearch           " incremental search: match as you type
-set ignorecase          " ignore case when searching...
-set smartcase           " ...except when I use caps in a search term
-set scrolloff=3         " start scrolling viewport berore cursor reaches top/bot
-set laststatus=2        " always show the status line
-set foldmethod=manual  
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set autoindent
+set incsearch
+set ignorecase
+set smartcase
+set scrolloff=3
+set laststatus=2
+set foldmethod=manual
 
 nmap <F7> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
@@ -31,7 +31,7 @@ function! s:CloseIfOnlyNerdTreeLeft()
   endif
 endfunction
 
-syntax enable               " enable syntax coloring
+syntax enable
 set t_Co=256
 let g:solarized_termcolors=16
 colorscheme solarized
