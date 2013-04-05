@@ -1,0 +1,2 @@
+# Local bashrc for usrs-oerp02
+export PYTHONPATH=~/addons:~/server/openerp:~/server/openerp/addons:~/web/addons

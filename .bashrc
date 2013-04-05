@@ -1,7 +1,6 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -120,12 +119,11 @@ function cyan_red_prompt
 set t_Co=16
 cyan_red_prompt
 EDITOR=`which vim`
-export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:~/bin:/usr/bin/eclipse
-alias rdesktop='rdesktop -g 1920x1032 -u brendan.clune -d logicsupply.com -p -'
-alias srdesktop='rdesktop -g 1920x1032 -u administrator -d logicsupply.com -p -'
-complete -W "{usvt-{dev06,bzr01},local-{db02},usrs-oerp02}" ssh
 
 #here we go...
 set -o vi
-xrdb -merge ~/.Xresources
 export GPGKEY=7935875C
+
+if [ -f ~/.bashrc-$HOSTNAME ]; then
+    source .bashrc-$HOSTNAME
+fi
