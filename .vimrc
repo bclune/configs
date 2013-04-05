@@ -17,6 +17,7 @@ set foldmethod=manual
 nmap <F7> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 let g:NERDTreeWinSize = 30
+let g:tagbar_width = 30
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 " Close all open buffers on entering a window if the only
 " buffer that's left is the NERDTree buffer
