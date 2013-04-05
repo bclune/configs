@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/brendan.clune/.config/Terminal'
+let g:netrw_dirhist_2='/home/brendan.clune/.xmonad'
+let g:netrw_dirhist_3='/opt/development/openerp-osc-import/wayne/accounting'
+let g:netrw_dirhist_4='/opt/google/chrome'
