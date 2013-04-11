@@ -53,3 +53,6 @@ let @e="di<?php echo $this->__('')?>4hp"
 
 " set matching pairs to include pointy brackets
 set mps+=<:>
+
+au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+

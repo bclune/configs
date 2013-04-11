@@ -124,6 +124,6 @@ EDITOR=`which vim`
 set -o vi
 export GPGKEY=7935875C
 
-if [ -f ~/.bashrc-$HOSTNAME ]; then
-    source .bashrc-$HOSTNAME
+if [ -f ~/.bash/.bashrc-$HOSTNAME ]; then
+    source ~/.bash/.bashrc-$HOSTNAME
 fi
