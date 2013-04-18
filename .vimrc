@@ -13,6 +13,8 @@ set smartcase
 set scrolloff=3
 set laststatus=2
 set foldmethod=manual
+set splitright
+set splitbelow
 
 nmap <F7> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
