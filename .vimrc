@@ -38,7 +38,7 @@ syntax enable
 set t_Co=256
 let g:solarized_termcolors=16
 colorscheme solarized
-set background=dark
+set background=light
 command W w
 command Wq wq
 command WQ wq
@@ -57,4 +57,3 @@ let @e="di<?php echo $this->__('')?>4hp"
 set mps+=<:>
 
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
-
