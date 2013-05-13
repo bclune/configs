@@ -48,7 +48,7 @@ command T execute "!pdflatex % && evince %:r.pdf"
 au VimLeave * :!clear 
 
 " --DIVINE WRITE-- "
-cmap w!! %!sudo tee > /dev/null %
+cmap w!! w !sudo tee > /dev/null %
 
 " Magento Translation boilerplate "
 let @e="di<?php echo $this->__('')?>4hp"
