@@ -143,3 +143,10 @@ if [ -n "$IS_DEVELOPMENT" ]; then
 else
     prod_prompt
 fi
+
+# Start tmux, if it exists
+if [ -e "/usr/bin/tmux" ]; then
+    if [ -z "$TMUX" ]; then
+        tmux new-session -t 0 || tmux
+    fi
+fi
