@@ -1,5 +1,8 @@
 call pathogen#infect()
 
+filetype plugin on
+filetype indent on
+
 set nocompatible
 set nowrap
 set colorcolumn=80
@@ -15,6 +18,10 @@ set laststatus=2
 set foldmethod=manual
 set splitright
 set splitbelow
+
+" fold/unfold with space
+nnoremap <space> za
+vnoremap <space> zf
 
 nmap <F7> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
