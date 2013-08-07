@@ -6,3 +6,7 @@ complete -W "{usvt-{dev06,bzr01},local-{db02},usrs-oerp02}" ssh
 xrdb -merge ~/.Xresources
 export TERM=xterm-256color
 export IS_DEVELOPMENT=y
+# Set dummy tmux variable
+if [ -z "$TMUX" ]; then
+    export TMUX=/dev/null
+fi
