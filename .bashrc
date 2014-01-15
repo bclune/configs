@@ -105,6 +105,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+source ~/.bash/git-completion.bash
+source ~/.bash/git-prompt.sh  
+
 function dev_prompt
 {
     local CYAN="\[\033[0;34m\]"
@@ -113,17 +116,7 @@ function dev_prompt
     local YELLOW="\[\033[0;33m\]"
     local BLACK="\[\033[0m\]"
 
-    PS1="${CYAN}[\u@\h ${YELLOW}\w${CYAN}]${BLACK} "
-}
-function prod_prompt
-{
-    local CYAN="\[\033[0;34m\]"
-    local GRAY="\[\033[0;36m\]"
-    local RED="\[\033[0;31m\]"
-    local YELLOW="\[\033[0;33m\]"
-    local BLACK="\[\033[0m\]"
-
-    PS1="${RED}[\u@\h ${CYAN}\w${RED}]${BLACK} "
+    PS1="${BLACK}\u@\h:${GRAY}\w${BLACK}\$(__git_ps1)\$${BLACK} "
 }
 
 set t_Co=16
@@ -137,16 +130,7 @@ if [ -f ~/.bash/.bashrc-$HOSTNAME ]; then
     source ~/.bash/.bashrc-$HOSTNAME
 fi
 
-# Set the development prompt (cyan, not red) only if $DEV is set
-if [ -n "$IS_DEVELOPMENT" ]; then
-    dev_prompt
-else
-    prod_prompt
-fi
+dev_prompt
 
-# Start tmux, if it exists
-if [ -e "/usr/bin/tmux" ]; then
-    if [ -z "$TMUX" ]; then
-        tmux new-session -t 0 || tmux
-    fi
-fi
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
