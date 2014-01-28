@@ -111,7 +111,7 @@ function dev_prompt
     local YELLOW="\[\033[0;33m\]"
     local BLACK="\[\033[0m\]"
 
-    PS1="${BLACK}\u@\h:${GRAY}\w${BLACK}\$(__git_ps1)\$${BLACK} "
+    PS1="${CYAN}\u@\h:${YELLOW}\w${GRAY}\$(__git_ps1)${BLACK}\$ "
 }
 
 set t_Co=16
