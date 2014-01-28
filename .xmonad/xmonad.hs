@@ -1,5 +1,6 @@
 import XMonad
 import XMonad.Config.Gnome
+import XMonad.Layout.NoBorders
 import XMonad.Config.Desktop (desktopLayoutModifiers)
 import XMonad.Hooks.SetWMName
 
@@ -9,7 +10,7 @@ myManageHook = composeAll (
     , className =? "Unity-2d-launcher" --> doFloat
     ])
 
-myLayout = tiled ||| Full
+myLayout = tiled ||| noBorders Full
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled   = Tall nmaster delta ratio
@@ -18,10 +19,10 @@ myLayout = tiled ||| Full
     nmaster = 1
  
     -- Default proportion of screen occupied by master pane
-    ratio   = 1/2
+    ratio   = 146/226
  
     -- Percent of screen to increment by when resizing panes
-    delta   = 3/100
+    delta   = 1/226
 
 main = xmonad $ gnomeConfig { manageHook            = myManageHook, 
                               layoutHook            = desktopLayoutModifiers(myLayout), 
