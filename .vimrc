@@ -23,7 +23,7 @@ syntax enable
 set t_Co=256
 let g:solarized_termcolors=16
 colorscheme solarized
-set background=light
+set background=dark
 
 " fold/unfold with space
 nnoremap <space> za
@@ -83,3 +83,5 @@ let g:tagbar_type_javascript = {
 "
 " Set tabstop to 4 spaces for python (PEP8 is great)
 au FileType python setlocal shiftwidth=4 tabstop=4
+
+set re=1
