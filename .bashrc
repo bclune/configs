@@ -130,8 +130,6 @@ dev_prompt
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-alias a='ack-grep'
-alias ack='ack-grep'
 alias ga='git add'
 alias gb='git branch'
 alias gc='git checkout'
@@ -141,3 +139,6 @@ alias gcim='git commit -m'
 alias gcm='git commit -m'
 alias gd='git diff'
 alias gs='git status'
+
+export VAGRANT_DEFAULT_PROVIDER=libvirt
+

@@ -15,9 +15,10 @@ set ignorecase
 set smartcase
 set scrolloff=3
 set laststatus=2
-set foldmethod=manual
+"set foldmethod=manual
 set splitright
 set splitbelow
+set nohlsearch
 
 syntax enable
 set t_Co=256
@@ -60,9 +61,6 @@ au VimLeave * :!clear
 
 " --DIVINE WRITE-- "
 cmap w!! w !sudo tee > /dev/null %
-
-" Magento Translation boilerplate "
-let @e="di<?php echo $this->__('')?>4hp"
 
 " set matching pairs to include pointy brackets
 set mps+=<:>

@@ -6,5 +6,4 @@ ln -s ~/configs/.xmonad ~/.xmonad
 rm ~/.bashrc
 ln -s ~/configs/.bashrc ~/.bashrc
 mkdir -p ~/.ssh
-cat ~/configs/.ssh/authorized_keys >> ~/.ssh/authorized_keys
 cd ~/configs && git submodule init && git submodule update

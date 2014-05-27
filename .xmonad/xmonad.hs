@@ -1,14 +1,8 @@
 import XMonad
-import XMonad.Config.Gnome
+import XMonad.Config.Xfce
 import XMonad.Layout.NoBorders
 import XMonad.Config.Desktop (desktopLayoutModifiers)
 import XMonad.Hooks.SetWMName
-
-myManageHook = composeAll (
-    [ manageHook gnomeConfig
-    , className =? "Unity-2d-panel" --> doIgnore
-    , className =? "Unity-2d-launcher" --> doFloat
-    ])
 
 myLayout = tiled ||| noBorders Full
   where
@@ -24,9 +18,8 @@ myLayout = tiled ||| noBorders Full
     -- Percent of screen to increment by when resizing panes
     delta   = 1/226
 
-main = xmonad $ gnomeConfig { manageHook            = myManageHook, 
-                              layoutHook            = desktopLayoutModifiers(myLayout), 
-                              modMask               = mod4Mask,
-                              normalBorderColor     = "#073642", 
-                              focusedBorderColor    = "#586e75",
-                              startupHook           = setWMName "LG3D" }
+main = xmonad $ xfceConfig { layoutHook            = desktopLayoutModifiers(myLayout), 
+                             modMask               = mod4Mask,
+                             normalBorderColor     = "#073642", 
+                             focusedBorderColor    = "#586e75"
+                            }
