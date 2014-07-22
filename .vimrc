@@ -30,6 +30,9 @@ set background=dark
 nnoremap <space> za
 vnoremap <space> zf
 
+" unfuck behavior of Y
+nmap Y y$
+
 nmap <F7> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 let g:NERDTreeWinSize = 40
@@ -83,3 +86,20 @@ let g:tagbar_type_javascript = {
 au FileType python setlocal shiftwidth=4 tabstop=4
 
 set re=1
+
+" highlight extra whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" strip extra whitespace on save
+function! TrimWhiteSpace()
+  %s/\s\+$//e
+endfunction
+autocmd BufWritePre     *.rb :call TrimWhiteSpace()
+
+"Set the cryptmethod to use the blowfish cipher
+:setlocal cm=blowfish

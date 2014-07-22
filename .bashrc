@@ -138,6 +138,7 @@ alias gci='git commit'
 alias gcim='git commit -m'
 alias gcm='git commit -m'
 alias gd='git diff'
+alias gds='git diff --staged'
 alias gs='git status'
 
 export VAGRANT_DEFAULT_PROVIDER=libvirt
