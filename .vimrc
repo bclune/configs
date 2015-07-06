@@ -24,7 +24,7 @@ syntax enable
 set t_Co=256
 let g:solarized_termcolors=16
 colorscheme solarized
-set background=dark
+set background=light
 
 " fold/unfold with space
 nnoremap <space> za
