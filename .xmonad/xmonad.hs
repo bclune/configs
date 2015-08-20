@@ -21,6 +21,5 @@ myLayout = tiled ||| noBorders Full
 main = xmonad $ gnomeConfig { layoutHook            = desktopLayoutModifiers(myLayout),
                              modMask               = mod4Mask,
                              normalBorderColor     = "#073642",
-                             focusedBorderColor    = "#586e75",
-                             startupHook           = setWMName "LG3D"
+                             focusedBorderColor    = "#586e75"
                             }

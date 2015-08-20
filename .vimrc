@@ -22,9 +22,10 @@ set nohlsearch
 
 syntax enable
 set t_Co=256
-let g:solarized_termcolors=16
-colorscheme solarized
-set background=light
+"let g:solarized_termcolors=16
+let base16colorspace=256
+colorscheme base16-monokai
+set background=dark
 
 " fold/unfold with space
 nnoremap <space> za

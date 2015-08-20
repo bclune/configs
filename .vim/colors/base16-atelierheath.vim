@@ -1,5 +1,5 @@
-" Base16 Monokai (https://github.com/chriskempson/base16)
-" Scheme: Wimer Hazenberg (http://www.monokai.nl)
+" Base16 Atelier Heath (https://github.com/chriskempson/base16)
+" Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/heath)
 
 " This enables the coresponding base16-shell script to run so that
 " :colorscheme works in terminals supported by base16-shell scripts
@@ -7,27 +7,27 @@
 "   let g:base16_shell_path=base16-builder/output/shell/
 if !has('gui_running')
   if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/base16-monokai.".&background.".sh"
+    execute "silent !/bin/sh ".g:base16_shell_path."/base16-atelierheath.".&background.".sh"
   endif
 endif
 
 " GUI color definitions
-let s:gui00 = "272822"
-let s:gui01 = "383830"
-let s:gui02 = "49483e"
-let s:gui03 = "75715e"
-let s:gui04 = "a59f85"
-let s:gui05 = "f8f8f2"
-let s:gui06 = "f5f4f1"
-let s:gui07 = "f9f8f5"
-let s:gui08 = "f92672"
-let s:gui09 = "fd971f"
-let s:gui0A = "f4bf75"
-let s:gui0B = "a6e22e"
-let s:gui0C = "a1efe4"
-let s:gui0D = "66d9ef"
-let s:gui0E = "ae81ff"
-let s:gui0F = "cc6633"
+let s:gui00 = "1b181b"
+let s:gui01 = "292329"
+let s:gui02 = "695d69"
+let s:gui03 = "776977"
+let s:gui04 = "9e8f9e"
+let s:gui05 = "ab9bab"
+let s:gui06 = "d8cad8"
+let s:gui07 = "f7f3f7"
+let s:gui08 = "ca402b"
+let s:gui09 = "a65926"
+let s:gui0A = "bb8a35"
+let s:gui0B = "379a37"
+let s:gui0C = "159393"
+let s:gui0D = "516aec"
+let s:gui0E = "7b59c0"
+let s:gui0F = "cc33cc"
 
 " Terminal color definitions
 let s:cterm00 = "00"
@@ -59,7 +59,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-monokai"
+let g:colors_name = "base16-atelierheath"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr)
