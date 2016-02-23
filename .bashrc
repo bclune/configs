@@ -115,8 +115,6 @@ export VAGRANT_DEFAULT_PROVIDER=libvirt
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-alias rainbow="ssh bclune@rainbow.pxinfra.net -f -L 9034:127.0.0.1:6669 -o ExitOnForwardFailure=yes -N"
-
 source $HOME/.rvm/scripts/rvm
 
 # Hadoop setup
@@ -137,3 +135,9 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-monokai.dark.sh"
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/home/brendan/.gvm/bin/gvm-init.sh" ]] && source "/home/brendan/.gvm/bin/gvm-init.sh"
+
+PATH="/home/brendan/perl5/bin${PATH+:}${PATH}"; export PATH;
+PERL5LIB="/home/brendan/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/brendan/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/brendan/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/brendan/perl5"; export PERL_MM_OPT;

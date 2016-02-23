@@ -18,8 +18,9 @@ myLayout = tiled ||| noBorders Full
     -- Percent of screen to increment by when resizing panes
     delta   = 1/226
 
-main = xmonad $ gnomeConfig { layoutHook            = desktopLayoutModifiers(myLayout),
-                             modMask               = mod4Mask,
-                             normalBorderColor     = "#073642",
-                             focusedBorderColor    = "#586e75"
+main = xmonad $ gnomeConfig { 
+                              layoutHook            = desktopLayoutModifiers(myLayout),
+                              modMask               = mod4Mask,
+                              normalBorderColor     = "#073642",
+                              focusedBorderColor    = "#586e75"
                             }
